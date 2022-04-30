@@ -9,7 +9,7 @@ client.BaseAddress = new Uri("https://api.github.com");
 client.DefaultRequestHeaders.Add("User-Agent", "C# console program");
 client.DefaultRequestHeaders.Accept.Add(
     new MediaTypeWithQualityHeaderValue("application/json"));
-var url = "https://leijnse.info/hyperlinks/rest/Restcontroller.php/?command=allmysql&count=9&from=0";
+var url = "https://leijnse.info/hyperlinks/rest/Restcontroller.php/?command=allmysql&count=900&from=0&search=music";
 HttpResponseMessage response = await client.GetAsync(url);
 response.EnsureSuccessStatusCode();
 var resp = await response.Content.ReadAsStringAsync();  
